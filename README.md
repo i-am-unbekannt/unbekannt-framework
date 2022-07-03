@@ -1,6 +1,4 @@
 # Unbekannt Framework
-## All you need in one tool
-
 
 <p align="center">
   <img src="https://cdn.discordapp.com/attachments/808620387390324746/993284489927204904/logo.png">
