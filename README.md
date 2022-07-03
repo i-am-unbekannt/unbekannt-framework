@@ -6,7 +6,7 @@
 
 # Main Window
 <p align="center">
-  <img src="[https://i.ibb.co/87Pp27s/tranc-Kopie.png](https://cdn.discordapp.com/attachments/808620387390324746/993284096417599578/main.PNG)">
+  <img src="https://cdn.discordapp.com/attachments/808620387390324746/993284096417599578/main.PNG">
 </p>
 
 
