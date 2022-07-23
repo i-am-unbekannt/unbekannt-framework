@@ -11,7 +11,7 @@ The Linux version is different from the Windows version but has more functions
   * `sudo apt-get install python3-pip git`
   * `git clone https://github.com/i-am-unbekannt/unbekannt-framework`
   * `cd unbekannt-framework/`
-  * `python3 install.py`
+  * `sudo python3 install.py`
 
 
 <p align="center">
