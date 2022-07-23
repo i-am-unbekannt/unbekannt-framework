@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+import time
+import sys
+import os
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 #   Unbekannt Framwork 6.0                    #
 #                                             #
@@ -69,9 +71,6 @@ except ModuleNotFoundError:
 	print("[*] ModuleNotFoundError: json")
 	sys.exit()
 	
-import time
-import sys
-import os
 init()
 
 R = Fore.LIGHTRED_EX
