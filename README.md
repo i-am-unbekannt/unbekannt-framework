@@ -2,14 +2,14 @@
 
 # Installation:
 * Windows:
-  * Download Unbekannt from [here](https://www.mediafire.com/file/2m44jdtdj5ian6c/Unbekannt-Setup-6.0.exe/file)
+  * `Download Unbekannt from [here](https://www.mediafire.com/file/2m44jdtdj5ian6c/Unbekannt-Setup-6.0.exe/file)
   
 * Linux
-  * sudo apt-get update -y
-  * sudo apt-get install python3-pip git
-  * git clone https://https://github.com/i-am-unbekannt/unbekannt-framework
-  * cd unbekannt-framework/
-  * python3 install.py
+  * `sudo apt-get update -y`
+  * `sudo apt-get install python3-pip git`
+  * `git clone https://https://github.com/i-am-unbekannt/unbekannt-framework`
+  * `cd unbekannt-framework/`
+  * `python3 install.py`
 
 
 <p align="center">
