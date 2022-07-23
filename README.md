@@ -1,6 +1,8 @@
 # Unbekannt Framework 6.0
+The Linux version is different from the Windows version but has more functions
 
 # Installation:
+
 * Windows:
   * Download Unbekannt from [here](https://www.mediafire.com/file/2m44jdtdj5ian6c/Unbekannt-Setup-6.0.exe/file)
   
