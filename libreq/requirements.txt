@@ -1,0 +1,7 @@
+colorama
+termcolor
+tcping
+requests
+socket
+subprocess
+json
