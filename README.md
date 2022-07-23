@@ -7,7 +7,7 @@
 * Linux
   * `sudo apt-get update -y`
   * `sudo apt-get install python3-pip git`
-  * `git clone https://https://github.com/i-am-unbekannt/unbekannt-framework`
+  * `git clone https://github.com/i-am-unbekannt/unbekannt-framework`
   * `cd unbekannt-framework/`
   * `python3 install.py`
 
