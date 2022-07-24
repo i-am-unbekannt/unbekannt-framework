@@ -2,6 +2,7 @@
 import time
 import sys
 import os
+
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 #   Unbekannt Framwork 6.0                    #
 #                                             #
@@ -14,65 +15,64 @@ import os
 try:
 	from colorama import Fore, init
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: colorama")
+	print("\n[*] ModuleNotFoundError: colorama\n[*] Try: pip3 install colorama")
 	sys.exit()
 	
 try:
 	import webbrowser
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: webbrowser")
+	print("\n[*] ModuleNotFoundError: webbrowser\n[*] Try: pip3 install webbrowser")
 	sys.exit()
 	
 try:
 	from termcolor import colored
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: termcolor")
+	print("\n[*] ModuleNotFoundError: termcolor\n[*] Try: pip3 install tercolor")
 	sys.exit()
 	
 try:
 	from tcping import Ping
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: tcping")
+	print("\n[*] ModuleNotFoundError: tcping\n[*] Try: pip3 install tcping")
 	sys.exit()
 	
 try:
 	import urllib.request
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: urllib")
+	print("\n[*] ModuleNotFoundError: urllib\n[*] Try: pip3 install urllib")
 	sys.exit()
 	
 try:
 	import subprocess
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: subprocess")
+	print("\n[*] ModuleNotFoundError: subprocess\n[*] Try: pip3 install subprocess")
 	sys.exit()
 	
 try:
 	from pathlib import Path
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: pathlib")
+	print("\n[*] ModuleNotFoundError: pathlib\n[*] Try: pip3 install pathlib")
 	sys.exit()
 
 try:
 	import socket
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: socket")
+	print("\n[*] ModuleNotFoundError: socket\n[*] Try: pip3 install socket")
 	sys.exit()
 
 try:
 	import requests
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: requests")
+	print("\n[*] ModuleNotFoundError: requests\n[*] Try: pip3 install requests")
 	sys.exit()
 	
 try:
 	import json
 except ModuleNotFoundError:
-	print("[*] ModuleNotFoundError: json")
+	print("\n[*] ModuleNotFoundError: json\n[*] Try: pip3 install json")
 	sys.exit()
 	
 init()
-
 R = Fore.LIGHTRED_EX
 Y = Fore.YELLOW
 G = Fore.LIGHTGREEN_EX
@@ -120,7 +120,6 @@ def load_animation():
 load_animation()
 
 def main():
-	
 	def mainscreen():
 		os.system('cls' if os.name == 'nt' else 'clear')
 		print(R+'''             
@@ -132,53 +131,40 @@ def main():
 		''')
 
 		def ansinput():
-
 			ans = input(R+'['+ colored('unbekannt', 'white', attrs=['underline']) +R+']'+W+'~: ')
-
 			if ans == "req":
 				try:
 					os.system("clear")
-					#check run as root
 					def sudo():
 						try:
 							if os.geteuid() != 0:
 								return True		
 						except:
 								return False
-
-					#check internet connection
 					def connect(host='http://google.com'):
 						try:
 							urllib.request.urlopen(host) #Python 3.x
 							return True
 						except:
 							return False
-
-					#check libreq/evil
 					def libreqevil():
 						try:
 							if pathEW.is_file():
 								return True
 						except:
 								return False
-
-					#check libreq/deauther
 					def libreqdeauther():
 						try:
 							if pathDE.is_file():
 								return True
 						except:
 								return False
-
-					#check libreq/client
 					def libreqclient():
 						try:
 							if pathCL.is_file():
 								return True
 						except:
 								return False
-
-					#check libreq/beacon
 					def libreqbeacon():
 						try:
 							if pathBE.is_file():
@@ -207,8 +193,6 @@ def main():
 					print()
 					print(R+"[-]"+W+" Error in module: "+R+"requirements"+W)
 					ansinput()
-				ansinput()
-
 
 			if ans == "deauther":
 				try:
@@ -233,7 +217,6 @@ def main():
 					print()
 					print(R+"[-]"+W+" Error in module: "+R+"Deauther"+W)
 					ansinput()
-				ansinput()
 
 			if ans == "evil":
 				try:
@@ -244,8 +227,6 @@ def main():
 					print()
 					print(R+"[-]"+W+" Error in module: "+R+"Evil Win"+W)
 					ansinput()
-				ansinput()
-
 
 			if ans == "beacon":
 				try:
@@ -254,22 +235,15 @@ def main():
 					print()
 					print(R+"[-]"+W+" Error in module: "+R+"beacon"+W)
 					ansinput()
-				ansinput()
-
 
 			if ans == "mail":
-				try: 
-					print(W+"""┏━("""+R+"""Message from Unbekannt"""+W+""")
+				print(W+"""┏━("""+R+"""Message from Unbekannt"""+W+""")
 ┃ Access to your Google Account from less secure apps
 ┃ 
 ┃ To better protect your account, effective May 30, 2022, Google will no longer support any third-party apps
 ┃ or devices that use your username and password to log into your Google Account.
 ┃
 ┗━(more: https://support.google.com/accounts/answer/6010255)""")
-				except:
-					print()
-					print(R+"[-]"+W+" Error in module: "+R+"MailBomber"+W)
-					ansinput()
 				ansinput()
 
 			if ans == "database":
@@ -287,141 +261,107 @@ def main():
 ╚══════════════════════════════════════════════════════════════════════════════════════════╝''')
 				try:
 					option = input(R+'['+ colored('unbekannt'+R+'@'+W+'database', 'white', attrs=['underline']) +R+']'+W+' SITE: ')
-
 					if option == "1":
 						webbrowser.open("https://instant-stresser.com")
 						ansinput()
-
 					if option == "2":
 						webbrowser.open("https://hardstresser.com")
 						ansinput()
-
 					if option == "3":
 						webbrowser.open("https://freestresser.to")
 						ansinput()
-
 					if option == "4":
 						webbrowser.open("https://ipstress.in")
 						ansinput()
-
 					if option == "5":
 						webbrowser.open("https://str3ssed.com")
 						ansinput()
-
 					if option == "6":
 						webbrowser.open("https://ts3booter.net")
 						ansinput()
-
 					if option == "7":
 						webbrowser.open("https://ipstresser.com")
 						ansinput()	
-					
 					if option == "8":
 						webbrowser.open("https://ripstresser.net")
 						ansinput()	
-
 					if option == "9":
 						webbrowser.open("https://databooter.to")
 						ansinput()	
-
 					if option == "10":
 						webbrowser.open("https://asylumstresser.to")
 						ansinput()
-
 					if option == "11":
 						webbrowser.open("https://nightmarestresser.com")
 						ansinput()	
-
 					if option == "12":
 						webbrowser.open("https://sunstresser.com")
 						ansinput()	
-
 					if option == "13":
 						webbrowser.open("https://layer7-security.net")
 						ansinput()	
-
 					if option == "14":
 						webbrowser.open("https://cybervm.io")
 						ansinput()	
-
 					if option == "15":
 						webbrowser.open("https://stresser.world")
 						ansinput()	
-
 					if option == "16":
 						webbrowser.open("https://anonboot.com")
 						ansinput()	
-
 					if option == "17":
 						webbrowser.open("https://booter.sx")
 						ansinput()	
-
 					if option == "18":
 						webbrowser.open("https://darkbooter.xyz")
 						ansinput()	
-
 					if option == "19":
 						webbrowser.open("https://vtoxicity.net")
 						ansinput()	
-
 					if option == "20":
 						webbrowser.open("https://smack.rip")
 						ansinput()	
-					
 					if option == "21":
 						webbrowser.open("https://booter.vip")
 						ansinput()	
-
 					if option == "22":
 						webbrowser.open("https://zdstresser.net")
 						ansinput()	
-
 					if option == "23":
 						webbrowser.open("https://supremesecurityteam.com")
 						ansinput()	
-
 					if option == "24":
 						webbrowser.open("https://lightstress.pw")
 						ansinput()	
-
 					if option == "25":
 						webbrowser.open("https://stresser.app")
 						ansinput()	
-
 					if option == "26":
 						webbrowser.open("https://booter.cc")
 						ansinput()	
-
 					if option == "27":
 						webbrowser.open("https://darkstress.xyz")
 						ansinput()	
-
 					if option == "28":
 						webbrowser.open("https://evil-stress.xyz")
 						ansinput()	
-
 					if option == "29":
 						webbrowser.open("https://downed.rip")
 						ansinput()	
-
 					if option == "30":
 						webbrowser.open("https://olympicstress.com")
 						ansinput()		
-
 					else:
-						print(R+"[-]"+W+" Unknown command"+R+": "+W+option)
+						print(R+"[-]"+W+" Unknown command in database"+R+": "+W+option)
 						ansinput()
-
 				except KeyboardInterrupt:
 					print()
-					print(R+"[-]"+W+" Leaving module")
+					print(R+"[-]"+W+" Leaving module: "+R+"DataBase"+W)
 					ansinput()
-
 				except:
 					print()
 					print(R+"[-]"+W+" Error in module: "+R+"DataBase"+W)
 					ansinput()
-				ansinput()
 
 			if ans == "lookup":
 				print(R+'''╔═ '''+W+'''LOOKUP'''+R+''' ═══════════╗
@@ -430,7 +370,6 @@ def main():
 ╚════════════════════╝''')
 
 				lookupans = input(R+'['+ colored('unbekannt'+R+'@'+W+'lookup', 'white', attrs=['underline']) +R+']'+W+'~: ')
-				
 				if lookupans == "-i":
 					print(B+"[+]"+W+" Using ip lookup")
 					try:
@@ -443,12 +382,10 @@ def main():
 						print(B+"[+] "+W+"Lookup Result "+R+">>"+W)
 						print(result)
 						ansinput()
-
 					except KeyboardInterrupt:
 						print()
 						print(R+"[-]"+W+" Leaving module")
 						ansinput()
-
 					except:
 						print(R+"[-] "+W+"Error in module: "+R+"Lookup"+W)
 						ansinput()
@@ -460,55 +397,49 @@ def main():
 						adrs = socket.gethostbyname(dlook)
 						print(B+"[+] "+W+dlook+" "+R+">>"+W+" "+adrs)
 						ansinput()
-
 					except KeyboardInterrupt:
 						print()
 						print(R+"[-]"+W+" Leaving module")
 						ansinput()
-
 					except:
 						print(R+"[-]"+W+" Error in module: "+R+"Lookup"+W)
 						ansinput()
-
-				else:
-					print(R+"[-] "+W+"Unknown command: "+lookupans)
-					ansinput()
 
 			if ans == "pinger":
 				try:
 					ip_list = input(R+'['+ colored('unbekannt'+R+'@'+W+'pinger', 'white', attrs=['underline']) +R+']'+W+' IP  : ')
 					port = input(R+'['+ colored('unbekannt'+R+'@'+W+'pinger', 'white', attrs=['underline']) +R+']'+W+' PORT: ')
 					time = int(input(R+'['+ colored('unbekannt'+R+'@'+W+'pinger', 'white', attrs=['underline']) +R+']'+W+' TIME: '))
-		
 				except KeyboardInterrupt:
 					print()
-					print(R+"[-]"+W+" Leaving module")
+					print(R+"[-]"+W+" Leaving module: "+R+"Pinger"+W)
 					ansinput()
-
 				except:
 					print()
 					print(R+"[-]"+W+" Error in module: "+R+"Pinger"+W)
 					ansinput()
-				else:
-					try:
-						print(B+"[+]"+W+" Press "+R+"CTRL+C"+W+" to stop ping"+R+"!"+W)
-						ping = Ping(ip_list, port, 60)
-						ping.ping(time)
-					except TimeoutError:
-						print(R+"[-]"+W+" Host is down")
-						ansinput()
 
-					except KeyboardInterrupt:
-						print()
-						print(R+"[-]"+W+" Leaving module")
-						ansinput()
-					except:
-						print()
-						print(R+"[-]"+W+" Error in module: "+R+"Pinger"+W)
-						ansinput()
+				try:
+					print(B+"[+]"+W+" Press "+R+"CTRL+C"+W+" to stop ping"+R+"!"+W)
+					ping = Ping(ip_list, port, 60)
+					ping.ping(time)
+					ansinput()
+				except TimeoutError:
+					print(R+"[-]"+W+" Host is down")
+					ansinput()
+				except KeyboardInterrupt:
+					print()
+					print(R+"[-]"+W+" Leaving module: "+R+"Pinger"+W)
+					ansinput()
+				except:
+					print()
+					print(R+"[-]"+W+" Error in module: "+R+"Pinger"+W)
+					ansinput()
+			
 
 			if ans == ".":
-				userLINUX = os.getlogin()
+				import pwd
+				userLINUX = pwd.getpwuid(os.getuid())[0]
 				print(B+"[+]"+W+" Press "+R+"CTRL+C"+W+" to exit terminal"+R+"!")
 				def ConsoleLog():
 					try:
@@ -519,7 +450,7 @@ def main():
 
 					except KeyboardInterrupt:
 						print()
-						print(R+"[-]"+W+" Leaving module")
+						print(R+"[-]"+W+" Leaving module: "+R+"Shell"+W)
 						ansinput()
 					
 					except:
@@ -597,9 +528,6 @@ def main():
 			else:
 				print(R+"[-]"+W+" Unknown command"+R+": "+W+ans)
 				ansinput()
-
 		ansinput()
-
 	mainscreen()	
-
 main()
