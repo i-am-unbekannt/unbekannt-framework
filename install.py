@@ -4,7 +4,7 @@ import os, sys
 if os.geteuid() != 0:
   exit("[*] ERROR: Permission denied\n[*] Please try again, using 'sudo python3 install.py'\n")
 
-print(""""
+print("""
 #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
 #   Unbekannt Framwork 6.0 Installer          #
 #                                             #
