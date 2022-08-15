@@ -18,7 +18,7 @@ Note: The Linux & Windows versions are different
   * `cd unbekannt-framework/`
   * `sudo python3 install.py`
 
-# Main Window
+# Main Window (windows)
 <p align="center">
   <img src="https://cdn.discordapp.com/attachments/808620387390324746/993284096417599578/main.PNG">
 </p>
