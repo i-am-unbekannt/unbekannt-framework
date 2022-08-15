@@ -6,6 +6,7 @@
 </p>
 
 # Functions
+Note: The Linux & Windows versions are different
 * Default: 
   * exit  - exit unbekannt
   * help  - view all command
@@ -34,8 +35,6 @@
   * deauther - deauth specific BSSID/CHANNEL
 
 # Installation:
-Note: The Linux & Windows versions are different
-
 * Windows:
   * Download Unbekannt from [here](https://www.mediafire.com/file/2m44jdtdj5ian6c/Unbekannt-Setup-6.0.exe/file)
   
