@@ -1,5 +1,7 @@
 # Unbekannt Framework 6.0
-The Linux version is different from the Windows version but has more functions
+### A Hacking and Penetration Tool for Linux and Windows
+
+### Note: The Linux & Windows versions are different
 
 # Installation:
 
