@@ -1,5 +1,5 @@
 # Unbekannt Framework 6.0
-### A Hacking and Penetration Tool for Linux and Windows
+### A Hacking and Pentesting Tool for Linux and Windows
 
 <p align="center">
   <img src="https://cdn.discordapp.com/attachments/808620387390324746/993284489927204904/logo.png">
