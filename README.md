@@ -5,7 +5,7 @@
   <img src="https://cdn.discordapp.com/attachments/808620387390324746/993284489927204904/logo.png">
 </p>
 
-# INFO
+# Info
 The Linux version is no longer supported! The last Linux version is 6.0 that you find inside this repository.
 The reason for this is that the Unbekannt Framework originally existed for Windows and Linux only supports a few features.
 Thats why I decided not to release new versions for Linux anymore.
