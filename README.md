@@ -20,6 +20,7 @@ Official websites of the third-party tools used by the Unbekannt Framework:
 
 # Using Unbekannt Framework
 For more help read the help page inside the Unbekannt Framework by typing 'help'
+
 The modules:
 
 * module/network/ping          - ping an ip address to see if the host is up or down
@@ -38,7 +39,7 @@ The modules:
 The latest version:
 * [Unbekannt Framework v7.0](https://www.mediafire.com/file/l4axwocq2bvfdzp/unbekannt-framework-windows-x64-installer.exe/file)
 
-All version:
+Older versions:
 * [Unbekannt Framework v6.0](https://www.mediafire.com/file/2m44jdtdj5ian6c/Unbekannt-Setup-6.0.exe/file)
 * [Unbekannt Framework v5.0](https://www.mediafire.com/file/066pupar7xui3zd/Unbekannt-Setup-5.0.exe/file)
 * [Unbekannt Framework v4.6](https://www.mediafire.com/file/87g460ecjz3muop/Unbekannt-Setup_4.6.exe/file)
