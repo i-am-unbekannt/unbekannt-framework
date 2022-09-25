@@ -23,20 +23,20 @@ For more help read the help page inside the Unbekannt Framework by typing `help`
 
 The modules:
 ```
-* **module/network/ping**          - ping an ip address to see if the host is up or down
-* **module/network/looukp**        - lookup an ip address to see geo location and more
-* **module/network/scan**          - scan an ip address to see all open ports
-* **module/network/netscan**       - scan an entire network for available ip and mac addresses
-* **module/network/ddos**          - ddos ip addresses or sites
-* **module/network/exec/lanc**     - use lanc to sniffer/spoof your network [official site](https://lanc-remastered.com/)
-* **module/network/exec/pcps**     - use pcps to sniffrt/spoof your network (includes xbox and ps4) [official site](https://psychocoding.net)
+module/network/ping      - ping an ip address to see if the host is up or down
+module/network/lookup    - lookup an ip address to see geo location and more
+module/network/scan      - scan an ip address to see all open ports
+module/network/netscan   - scan an entire network for available ip and mac addresses
+module/network/ddos      - ddos ip addresses or sites
+module/network/exec/lanc - use lanc to sniffer/spoof your network [official site](https://lanc-remastered.com/)
+module/network/exec/pcps - use pcps to sniffrt/spoof your network (includes xbox and ps4) [official site](https://psychocoding.net)
 
-* **module/tools/reverse_tcp**     - setup reverse tcp shell or listen for incoming connections
-* **module/tools/send_sms**        - send an anonymous sms every 24 hours
+module/tools/reverse_tcp - setup reverse tcp shell or listen for incoming connections
+module/tools/send_sms    - send an anonymous sms every 24 hours
 
-* **module/exec/moba**             - enhanced terminal for windows with x11 server, tabbed ssh client, network tools [official site](https://mobaxterm.mobatek.net/)
-* **module/exec/putty**            - connect via ssh to server [official site](https://putty.org)
-* **module/exec/box**              - privat tcp chat
+module/exec/moba         - enhanced terminal for windows with x11 server, tabbed ssh client, network tools [official site](https://mobaxterm.mobatek.net/)
+module/exec/putty        - connect via ssh to server [official site](https://putty.org)
+module/exec/box          - privat tcp chat
 ```
 # Installing
 The latest version:
