@@ -40,9 +40,10 @@ module/exec/box          - privat tcp chat
 ```
 # Installing
 The latest version (recommended):
-* Download [Unbekannt Framework v7.1](https://www.mediafire.com/file/fzmtezq4xdob3t0/unbekannt-framework-v7.1-windows-x64-installer.exe/file)
+* Download [Unbekannt Framework v7.2.2](https://www.mediafire.com/file/hly51ep2kzdjx7j/unbekannt-framework-v7.2.2-windows-x64-installer.exe/file)
 
 Older versions:
+* Download [Unbekannt Framework v7.1](https://www.mediafire.com/file/fzmtezq4xdob3t0/unbekannt-framework-v7.1-windows-x64-installer.exe/file)
 * Download [Unbekannt Framework v6.0](https://www.mediafire.com/file/2m44jdtdj5ian6c/Unbekannt-Setup-6.0.exe/file)
 * Download [Unbekannt Framework v5.0](https://www.mediafire.com/file/066pupar7xui3zd/Unbekannt-Setup-5.0.exe/file)
 * Download [Unbekannt Framework v4.6](https://www.mediafire.com/file/87g460ecjz3muop/Unbekannt-Setup_4.6.exe/file)
