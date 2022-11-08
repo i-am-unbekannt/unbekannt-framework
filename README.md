@@ -23,24 +23,28 @@ For more help read the help page inside the Unbekannt Framework by typing `help`
 
 The modules:
 ```
-module/network/ping      - ping an ip address to see if the host is up or down
-module/network/lookup    - lookup an ip address to see geo location and more
-module/network/scan      - scan an ip address to see all open ports
-module/network/netscan   - scan an entire network for available ip and mac addresses
-module/network/ddos      - ddos ip addresses or sites
-module/network/exec/lanc - use lanc to sniffer/spoof your network
-module/network/exec/pcps - use pcps to sniffrt/spoof your network (includes xbox and ps4) 
+Modules                       Description
+———————                       ———————————
+module/network/ping           ping an ip address to see if the host is up or down
+module/network/looukp         lookup an ip address to see geo location and more
+module/network/scan           scan an ip address to see all open ports
+module/network/netscan        scan an entire network for available ip and mac addresses
+module/network/ddos           ddos ip addresses or websites
+module/network/lanc           use lanc to sniffer/spoof your network
+module/network/pcps           use pcps to sniffrt/spoof your network (includes xbox and ps4)
 
-module/tools/reverse_tcp - setup reverse tcp shell or listen for incoming connections
-module/tools/send_sms    - send an anonymous sms every 24 hours
+module/tools/reverse_tcp      setup reverse tcp shell or listen for incoming connections
+module/tools/send_sms         send an anonymous sms every 24 hours
+module/tools/webkit           ip and user-agent graber via url
+module/tools/ssh_exec         multiply command execution over ssh
 
-module/exec/moba         - enhanced terminal for windows with x11 server, tabbed ssh client, network tools
-module/exec/putty        - connect via ssh to server
-module/exec/box          - privat tcp chat
+module/exec/moba              enhanced terminal for windows with x11 server, tabbed ssh client, network tools
+module/exec/putty             connect via ssh to server
+module/exec/box               privat tcp chat
 ```
 # Installing
 The latest version (recommended):
-* Download [Unbekannt Framework v7.2.2](https://please-wait-we-update-the-framework) release date: (2022-11-08)
+* Download [Unbekannt Framework v7.2.2](https://www.mediafire.com/file/pw1ztzmh7x4i4dl/unbekannt-framework-v7.2.2-x64-installer.exe/file) release date: (2022-11-08)
 
 Older versions:
 * Download [Unbekannt Framework v7.1](https://www.mediafire.com/file/fzmtezq4xdob3t0/unbekannt-framework-v7.1-windows-x64-installer.exe/file) release date: (2022-09-25)
