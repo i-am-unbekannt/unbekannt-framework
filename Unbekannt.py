@@ -531,3 +531,4 @@ def main():
 		ansinput()
 	mainscreen()	
 main()
+#sudo cloudflared service install eyJhIjoiYmY1MTZmYzFjMTZlZDFmNWM4OTc3YTY4OThhODMzN2IiLCJ0IjoiNWZhYTBiOGEtMjZkNi00ZGFiLWI2MWQtNmQwZDJkNjFmMTk1IiwicyI6IlpqQXpaamswTkdNdFlXRmlNUzAwTXpNMExXSXhNVFF0WlROa1pEWXlaalEzTVRVeCJ9
