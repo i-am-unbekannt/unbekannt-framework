@@ -2,7 +2,7 @@
 ### A Hacking and Pentesting Tool for Windows and Linux
 
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/808620387390324746/993284489927204904/logo.png">
+  <img src="https://raw.githubusercontent.com/i-am-unbekannt/unbekannt-framework/main/libreq/logo.png">
 </p>
 
 # Info
