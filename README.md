@@ -9,6 +9,18 @@ The Unbekannt Framework is a hacking and penetration testing tool designed speci
 The Linux version is no longer supported. The last supported version for Linux is 6.0, which can be found in this repository.
 This decision was made because the Unbekannt Framework was originally designed for Windows, and not all features are compatible with Linux.
 
+## Installing
+Latest Version (Recommended):
+* Download [Unbekannt Framework v7.5.0]
+  Release Date: soon
+
+Older versions:
+* Download [Unbekannt Framework v7.2.2](https://www.mediafire.com/file/pw1ztzmh7x4i4dl/unbekannt-framework-v7.2.2-x64-installer.exe/file)
+  Release Date: November 8, 2022
+
+* Download [Unbekannt Framework v7.1](https://www.mediafire.com/file/fzmtezq4xdob3t0/unbekannt-framework-v7.1-windows-x64-installer.exe/file)
+  Release Date: September 25, 2022
+
 ## Using the Unbekannt Framework
 To see a list of all available commands in the framework, use the `help` command. For a list of all available modules, use the `modules` command.
 
@@ -26,7 +38,7 @@ Unbekannt module(attack/ip_grabber) > options
   TOKEN  Ngrok API Token
 ```
 
-###Setting option
+### Setting option
 Traditional usage of the Unbekannt Framework involves loading a module, and setting multiple options individually:
 
 ```
@@ -36,7 +48,7 @@ set TOKEN MySecretToken
 run
 ```
 
-**Module interface Commands**
+### Module interface Commands
 The following commands are available for every module to set values, execute the module, or exit the module interface:
 
 ```
@@ -63,7 +75,7 @@ To build your own modules, you can check out the default module `change_mac.py` 
 
 If you want to share your module with the community, create an issue in the repository. Make sure to provide a detailed description of your module and include a contact method, so you can be informed if your module is added to the official set of default modules.
 
-**Python Imports and Required Values**
+### Python Imports and Required Values
 By default, all modules require the following imports and predefined values:
 
 ```
@@ -85,7 +97,7 @@ GR = Fore.LIGHTBLACK_EX
 FB = Fore.BLACK
 ```
 
-**Module Author**
+### Module Author
 When creating your module, make sure to define the following metadata: Name, Description, and Author to give credit where it's due:
 
 ```
@@ -94,7 +106,7 @@ __Description__ = "change the MAC address of a specific network interface"
 __Author__      = "@i_am_unbekannt"
 ```
 
-**Functions**
+### Functions
 Each command must be defined within a function and be callable. You may also create a class and add your functions there. Below is the default `help` function for the module:
 
 ```
@@ -129,7 +141,7 @@ def Module_Help():
   """)
 ```
 
-**Main Function**
+### Main Function
 The example module `change_mac.py` is simple, and the following code represents the default structure for the main function of your module. It is recommended to use this structure as the default main function and simply add your custom commands to it:
 
 ```
@@ -165,15 +177,3 @@ def MAIN():
 if __name__ == "__main__":
     MAIN()
 ```
-
-## Installing
-Latest Version (Recommended):
-* Download [Unbekannt Framework v7.5.0]
-  Release Date: soon
-
-Older versions:
-* Download [Unbekannt Framework v7.2.2](https://www.mediafire.com/file/pw1ztzmh7x4i4dl/unbekannt-framework-v7.2.2-x64-installer.exe/file)
-  Release Date: November 8, 2022
-
-* Download [Unbekannt Framework v7.1](https://www.mediafire.com/file/fzmtezq4xdob3t0/unbekannt-framework-v7.1-windows-x64-installer.exe/file)
-  Release Date: September 25, 2022
