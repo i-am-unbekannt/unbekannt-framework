@@ -1,54 +1,179 @@
 # Unbekannt Framework
-### A Hacking and Pentesting Tool for Windows and Linux
+The Unbekannt Framework is a hacking and penetration testing tool designed specifically for Windows.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/i-am-unbekannt/unbekannt-framework/main/libreq/logo.png">
 </p>
 
-# Info
-The Linux version is no longer supported! The last Linux version is 6.0 that you find inside this repository.
-The reason for this is that the Unbekannt Framework originally existed for Windows and Linux only supports a few features.
-Thats why I decided not to release new versions for Linux anymore.
+## End of Linux Support
+The Linux version is no longer supported. The last supported version for Linux is 6.0, which can be found in this repository.
+This decision was made because the Unbekannt Framework was originally designed for Windows, and not all features are compatible with Linux.
 
-It is strongly recommended to install the requirements for Unbekannt Framework.
-Some modules need third-party tools so you dont get errors inside the modules.
+## Using the Unbekannt Framework
+To see a list of all available commands in the framework, use the `help` command. For a list of all available modules, use the `modules` command.
 
-Official websites of the third-party tools used by the Unbekannt Framework:
-  * pcap:  https://www.win10pcap.org/download/
-  * npcap: https://npcap.com/#download/
-  * c++:   https://www.microsoft.com/de-de/download/details.aspx?id=40784
+Each module has a set of options which must be set before running. These can be seen with the `options` or `show options` command:
 
-# Using Unbekannt Framework
-For more help read the help page inside the Unbekannt Framework by typing `help`
-
-The modules:
 ```
-Modules                       Description
-———————                       ———————————
-module/network/ping           ping an ip address to see if the host is up or down
-module/network/looukp         lookup an ip address to see geo location and more
-module/network/scan           scan an ip address to see all open ports
-module/network/netscan        scan an entire network for available ip and mac addresses
-module/network/ddos           ddos ip addresses or websites
-module/network/lanc           use lanc to sniffer/spoof your network
-module/network/pcps           use pcps to sniffrt/spoof your network (includes xbox and ps4)
+Unbekannt module(attack/ip_grabber) > options
 
-module/tools/reverse_tcp      setup reverse tcp shell or listen for incoming connections
-module/tools/send_sms         send an anonymous sms every 24 hours
-module/tools/webkit           ip and user-agent graber via url
-module/tools/ssh_exec         multiply command execution over ssh
+ Module options (module/attack/ip_grabber):
 
-module/exec/moba              enhanced terminal for windows with x11 server, tabbed ssh client, network tools
-module/exec/putty             connect via ssh to server
-module/exec/box               privat tcp chat
+  Name   Description      Current Setting
+  ----   -----------      ---------------
+  URL    Redirect url
+  PORT   Localhost port   5000
+  TOKEN  Ngrok API Token
 ```
-# Installing
-The latest version (recommended):
-* Download [Unbekannt Framework v7.2.2](https://www.mediafire.com/file/pw1ztzmh7x4i4dl/unbekannt-framework-v7.2.2-x64-installer.exe/file) release date: (2022-11-08)
+
+**Setting option**
+Traditional usage of the Unbekannt Framework involves loading a module, and setting multiple options individually:
+
+```
+use module/attack/ip_grabber
+set URL https://facebook.com
+set TOKEN MySecretToken
+run
+```
+
+**Module interface Commands**
+The following commands are available for every module to set values, execute the module, or exit the module interface:
+
+```
+Command    Description
+-------    -----------
+run        Run the module
+set        Set a value for a object
+back       Leave the module
+clear      Clear the screen
+options    Show available options for the module
+help       List all commands
+```
+
+## Import Modules
+As of February 22, 2025, only Python modules are supported. To import a module, navigate to your installation path and place the `.py` file into the `import` folder.
+
+The default installation path is:
+`C:\Program Files (x86)\i-am-unbekannt\Unbekannt Framework`
+
+Make sure that Python is installed on your machine, along with all the required dependencies for the imported modules to run correctly. 
+
+## Build Modules
+To build your own modules, you can check out the default module `change_mac.py` as an example of the required structure.
+
+If you want to share your module with the community, create an issue in the repository. Make sure to provide a detailed description of your module and include a contact method, so you can be informed if your module is added to the official set of default modules.
+
+**Python Imports and Required Values**
+By default, all modules require the following imports and predefined values:
+
+```
+from colorama import Fore, init
+from termcolor import colored
+
+init()
+
+RN = Fore.RED
+R = Fore.LIGHTRED_EX
+Y = Fore.YELLOW
+G = Fore.LIGHTGREEN_EX
+M = Fore.MAGENTA
+C = Fore.CYAN
+W = Fore.WHITE
+B = Fore.LIGHTBLUE_EX
+RB = Fore.RED
+GR = Fore.LIGHTBLACK_EX
+FB = Fore.BLACK
+```
+
+**Module Author**
+When creating your module, make sure to define the following metadata: Name, Description, and Author to give credit where it's due:
+
+```
+__CommandName__ = "change_mac"
+__Description__ = "change the MAC address of a specific network interface"
+__Author__      = "@i_am_unbekannt"
+```
+
+**Functions**
+Each command must be defined within a function and be callable. You may also create a class and add your functions there. Below is the default `help` function for the module:
+
+```
+def Module_Help():
+    length = len(__CommandName__)
+    print(f"""
+ Information
+ ===========
+
+ {__Description__}
+ By: {__Author__}
+          
+ Options for module(import/{__CommandName__})
+ ==========================={'=' * length}
+
+  Command                     Description
+  ———————                     ———————————
+
+  mac show all                displays the MAC addresses of all interfaces
+  mac show                    shows your current MAC address
+  mac set <INTERFACE> <MAC>   sets a specific MAC address for a given interface
+
+
+ Module interface Commands
+ =========================
+
+  Command    Description
+  ———————    ———————————
+  back       leave the module
+  clear      clear the screen
+  help       list all commands
+  """)
+```
+
+**Main Function**
+The example module `change_mac.py` is simple, and the following code represents the default structure for the main function of your module. It is recommended to use this structure as the default main function and simply add your custom commands to it:
+
+```
+def MAIN():
+    try:
+        while True:
+            Ans_Input = input(colored('Unbekannt', 'white', attrs=['underline']) +' module('+RB+f'import/{__CommandName__}'+W+') '+R+'>'+W+' ')
+
+            elif Ans_Input == "My Custom Command": # Your custom command
+                MyCustomFunc()                     # Call your custom function
+
+            elif Ans_Input == "":
+                continue
+
+            elif Ans_Input == "clear":
+                os.system("cls")
+
+            elif Ans_Input.lower() in ["exit", "back"]:
+                return
+
+            elif Ans_Input.lower() == "help" or Ans_Input.lower() == "options":
+                Module_Help()
+
+            else:
+                print(R + "[-]" + W + " command not found: '" + Ans_Input + "'")
+
+    except KeyboardInterrupt:
+        return
+    except Exception as E:
+        print(R + "[-]" + W + f" Module Error: {E}")
+        return
+
+if __name__ == "__main__":
+    MAIN()
+```
+
+## Installing
+Latest Version (Recommended):
+* Download [Unbekannt Framework v7.5.0]
+  Release Date: soon
 
 Older versions:
-* Download [Unbekannt Framework v7.1](https://www.mediafire.com/file/fzmtezq4xdob3t0/unbekannt-framework-v7.1-windows-x64-installer.exe/file) release date: (2022-09-25)
-* Download [Unbekannt Framework v6.0](https://www.mediafire.com/file/2m44jdtdj5ian6c/Unbekannt-Setup-6.0.exe/file) release date: (2022-07-04)
-* Download [Unbekannt Framework v5.0](https://www.mediafire.com/file/066pupar7xui3zd/Unbekannt-Setup-5.0.exe/file) release date: (2022-04-11)
-* Download [Unbekannt Framework v4.6](https://www.mediafire.com/file/87g460ecjz3muop/Unbekannt-Setup_4.6.exe/file) release date: (2022-03-18)
-* Download [Unbekannt Framework v3.2](https://www.mediafire.com/file/b23qoxwyytxsre5/Unbekannt_v3.2_setup.exe/file) release date: (2021-11-26)
+* Download [Unbekannt Framework v7.2.2](https://www.mediafire.com/file/pw1ztzmh7x4i4dl/unbekannt-framework-v7.2.2-x64-installer.exe/file)
+  Release Date: November 8, 2022
+
+* Download [Unbekannt Framework v7.1](https://www.mediafire.com/file/fzmtezq4xdob3t0/unbekannt-framework-v7.1-windows-x64-installer.exe/file)
+  Release Date: September 25, 2022
