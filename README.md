@@ -12,7 +12,7 @@ This decision was made because the Unbekannt Framework was originally designed f
 ## Installing
 Latest Version (Recommended):
 * Download [Unbekannt Framework v7.5.0]
-  Release Date: soon
+  Release Date: Not known
 
 Older versions:
 * Download [Unbekannt Framework v7.2.2](https://www.mediafire.com/file/pw1ztzmh7x4i4dl/unbekannt-framework-v7.2.2-x64-installer.exe/file)
